@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  font-family: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, rgba(119, 136, 115, 0.14), transparent 20%),
+    radial-gradient(circle at top right, rgba(220, 207, 192, 0.18), transparent 18%),
+    linear-gradient(135deg, #FDF6ED 0%, #F7EDE3 45%, #F2E7DD 100%);
+  color: #2F3A2E;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.card {
+  transform: translateY(0);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(119, 136, 115, 0.4);
+  box-shadow: 0 22px 48px rgba(119, 136, 115, 0.16);
+}
+
+.social-icon:hover {
+  transform: rotate(8deg) scale(1.08);
+  box-shadow: 0 0 24px rgba(119, 136, 115, 0.18);
+}
+
+.bg-slate-950\/50,
+.bg-slate-950\/60,
+.bg-slate-950\/90,
+.bg-slate-950 {
+  background-color: #FFF5EB !important;
+}
+
+.bg-white\/10 {
+  background-color: rgba(253, 246, 237, 0.95) !important;
+}
+
+.bg-white\/5 {
+  background-color: rgba(220, 207, 192, 0.24) !important;
+}
+
+.border-white\/10 {
+  border-color: rgba(220, 207, 192, 0.95) !important;
+}
+
+.text-white {
+  color: #2F3A2E !important;
+}
+
+.text-slate-300,
+.text-slate-400,
+.text-slate-500,
+.text-slate-600 {
+  color: #6D655C !important;
+}
+
+.custom-cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 9999px;
+  pointer-events: none;
+  z-index: 2000;
+  transform: translate(-50%, -50%);
+  transition: transform 0.12s ease, width 0.2s ease, height 0.2s ease, background 0.2s ease;
+}
+
+.custom-cursor.active {
+  width: 42px;
+  height: 42px;
+  background: rgba(119, 136, 115, 0.15);
+  border-color: rgba(119, 136, 115, 0.7);
+}
+
+.blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(80px);
+  opacity: 0.25;
+  animation: drift 12s ease-in-out infinite;
+}
+
+.blob-one {
+  top: 8%;
+  left: -5%;
+  width: 320px;
+  height: 320px;
+  background: #778873;
+}
+
+.blob-two {
+  right: -5%;
+  top: 30%;
+  width: 280px;
+  height: 280px;
+  background: #DCCFC0;
+  animation-delay: 2s;
+}
+
+.blob-three {
+  bottom: 8%;
+  left: 20%;
+  width: 240px;
+  height: 240px;
+  background: #FDF6ED;
+  animation-delay: 4s;
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(30px, -30px, 0) scale(1.08);
+  }
+}

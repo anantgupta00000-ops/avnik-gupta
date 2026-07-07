@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avnik Gupta — Resume</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: 'Inter', Arial, sans-serif;
+        --page-bg: #f5f1eb;
+        --page-bg-2: #efe7dc;
+        --surface: #fcfaf5;
+        --surface-2: #fdf8ef;
+        --ink: #1f1b15;
+        --muted: #5f5b53;
+        --accent: #778873;
+        --accent-soft: rgba(119, 136, 115, 0.12);
+        --border: rgba(119, 136, 115, 0.18);
+        background: var(--page-bg);
+        color: var(--ink);
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(135deg, var(--page-bg), var(--page-bg-2));
+        color: var(--ink);
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+      .container { max-width: 1120px; margin: 0 auto; padding: 2rem 1.5rem; }
+      .resume { display: grid; grid-template-columns: 320px 1fr; gap: 1.5rem; }
+      .sidebar { background: linear-gradient(135deg, #1f1b15, #2d241c); color: #f5f1eb; border-radius: 24px; padding: 2rem; box-shadow: 0 20px 80px rgba(31,27,21,0.12); min-width: 0; }
+      .main { background: linear-gradient(135deg, var(--surface), var(--surface-2)); border-radius: 24px; padding: 2rem; box-shadow: 0 20px 80px rgba(31,27,21,0.08); min-width: 0; }
+      .photo { width: 100%; border-radius: 999px; overflow: hidden; border: 4px solid #dccfc0; margin-bottom: 1.5rem; }
+      .photo img { display: block; width: 100%; height: auto; object-fit: cover; }
+      h1 { margin: 0; font-size: clamp(2.5rem, 3vw, 3.4rem); letter-spacing: -0.04em; line-height: 1.02; }
+      h2 { margin: 0 0 1rem; font-size: 1rem; letter-spacing: 0.28em; text-transform: uppercase; color: #d8c4ae; }
+      h3 { margin: 0; font-size: 1.1rem; color: #1f1b15; }
+      .title { margin-top: 0.5rem; font-size: 1rem; color: #778873; letter-spacing: 0.15em; text-transform: uppercase; }
+      .section { margin-bottom: 2rem; }
+      .section-title { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; font-size: 0.95rem; letter-spacing: 0.18em; text-transform: uppercase; color: #778873; }
+      .section-title::before { content: ''; width: 0.9rem; height: 0.9rem; border-radius: 50%; background: #dccfc0; box-shadow: inset 0 0 0 3px #778873; }
+      .text-block { margin: 0.75rem 0 0; color: #5f5b53; line-height: 1.8; }
+      .list { list-style: none; padding: 0; margin: 0; }
+      .list li { margin-bottom: 0.75rem; display: flex; gap: 0.75rem; align-items: flex-start; }
+      .list li::before { content: '•'; color: #778873; display: inline-block; margin-top: 0.1rem; }
+      .skill-list, .tools-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; margin: 0; }
+      .skill-pill { padding: 0.7rem 1rem; border-radius: 999px; background: var(--accent-soft); color: #4f4a42; font-size: 0.94rem; }
+      .detail-row { display: grid; gap: 0.75rem; margin-top: 0.75rem; }
+      .detail-item { display: flex; gap: 0.75rem; align-items: center; }
+      .detail-item svg { width: 1rem; height: 1rem; color: #dccfc0; flex-shrink: 0; }
+      .contact-item a { color: inherit; text-decoration: none; }
+      .panel { background: rgba(255,255,255,0.72); border-radius: 20px; padding: 1.5rem; border: 1px solid rgba(215, 192, 168, 0.35); min-width: 0; }
+      .project-title { margin: 0; font-weight: 600; color: #1f1b15; }
+      .project-subtitle { margin: 0.35rem 0 0; color: #5f5b53; font-size: 0.95rem; }
+      .tags { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+      .tag { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.55rem 0.9rem; border-radius: 999px; background: rgba(119,136,115,0.12); color: #4f4a42; font-size: 0.88rem; }
+      .footer-note { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(119,136,115,0.18); color: #6d655c; font-size: 0.95rem; }
+      .signature { font-family: 'Segoe Script', cursive; font-size: 1.25rem; color: #1f1b15; }
+      .badge-grid { display: grid; gap: 1rem; grid-template-columns: 1fr 1fr; }
+      .badge { border-radius: 18px; border: 1px solid rgba(119,136,115,0.2); padding: 1rem; background: #fff8f2; min-width: 0; }
+      .badge strong { display: block; margin-bottom: 0.5rem; color: #1f1b15; }
+      .badge small { color: #5f5b53; }
+      .section-group { display: grid; gap: 1.5rem; }
+      @media (max-width: 960px) {
+        .resume { grid-template-columns: 1fr; }
+        .container { padding: 1rem; }
+      }
+      @media (max-width: 760px) {
+        .container { padding: 0.75rem; }
+        .sidebar, .main { padding: 1.15rem; border-radius: 18px; }
+        .skill-list { grid-template-columns: 1fr; }
+        .badge-grid { grid-template-columns: 1fr; }
+        .section { margin-bottom: 1.2rem; }
+        h1 { font-size: clamp(1.8rem, 8vw, 2.45rem); }
+        .section-title { font-size: 0.86rem; letter-spacing: 0.14em; }
+        .tags { gap: 0.5rem; }
+        .tag { padding: 0.5rem 0.8rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="resume">
+        <aside class="sidebar">
+          <div class="photo">
+            <img src="avnik-profile.png" alt="Avnik Gupta" />
+          </div>
+          <div class="section">
+            <h2>Contact</h2>
+            <div class="detail-row">
+              <div class="detail-item contact-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 8.5a9.9 9.9 0 0 0-4.47-5.9l-1 1A8 8 0 0 1 19 8.5c0 4.42-3.58 8-8 8a8 8 0 0 1-5.9-2.5l-1 1A9.9 9.9 0 0 0 8.5 21C14 21 19 16 19 10.5S14 0 8.5 0 0 5 0 10.5 5 21 10.5 21a9.9 9.9 0 0 0 5.9-2.5l1 1A11.9 11.9 0 0 1 8.5 24 13.5 13.5 0 0 1-5 10.5 13.5 13.5 0 0 1 8.5-3C14-3 19 2 19 7.5Z"/></svg><span>+91 7042412263</span></div>
+              <div class="detail-item contact-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 13L2 6V4l10 5 10-5v2l-10 7z"/><path d="M2 8v12h20V8l-10 7L2 8z"/></svg><span><a href="mailto:avnikgupta16@gmail.com">avnikgupta16@gmail.com</a></span></div>
+              <div class="detail-item contact-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 4.41 2.87 8.16 6.84 9.49.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.78.61-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.9-.62.07-.61.07-.61 1 .07 1.53 1.02 1.53 1.02.89 1.52 2.33 1.08 2.9.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.7 1.02A9.4 9.4 0 0 1 12 7.12c.86.01 1.73.12 2.54.35 1.85-1.3 2.69-1.02 2.69-1.02.55 1.41.2 2.45.1 2.71.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.91.68 1.84 0 1.33-.01 2.4-.01 2.73 0 .26.18.58.69.48A9.96 9.96 0 0 0 22 12c0-5.5-4.46-9.96-9.96-9.96z"/></svg><span><a href="https://github.com/anantgupta00000-ops" target="_blank" rel="noreferrer">github.com/anantgupta00000-ops</a></span></div>
+            </div>
+          </div>
+          <div class="section">
+            <h2>About Me</h2>
+            <p class="text-block">A motivated and detail-focused frontend developer with strong web development skills and practical experience creating responsive, user-centered interfaces. I enjoy solving real-world problems through elegant digital design.</p>
+          </div>
+          <div class="section">
+            <h2>Technical Skills</h2>
+            <ul class="skill-list">
+              <li class="skill-pill">HTML5</li>
+              <li class="skill-pill">CSS3</li>
+              <li class="skill-pill">JavaScript (ES6+)</li>
+              <li class="skill-pill">jQuery</li>
+              <li class="skill-pill">Responsive Design</li>
+              <li class="skill-pill">Git</li>
+              <li class="skill-pill">GitHub</li>
+              <li class="skill-pill">Figma</li>
+            </ul>
+          </div>
+          <div class="section">
+            <h2>Computer Skills</h2>
+            <ul class="list">
+              <li>MS Word </li>
+              <li>MS Excel </li>
+              <li>MS PowerPoint </li>
+            </ul>
+          </div>
+          <div class="section">
+            <h2>Certifications</h2>
+            <ul class="list">
+              <li>Basic & Web Designing (FTEC)</li>
+              <li>Responsive Web Design</li>
+            </ul>
+          </div>
+        </aside>
+
+        <section class="main">
+          <div class="section">
+            <div class="section-title">AVNIK GUPTA</div>
+            <h1>Web Developer</h1>
+            <p class="text-block">I am a motivated and quick learner with hands-on knowledge of modern web development technologies. I enjoy creating responsive websites and solving real-world problems through polished digital design.</p>
+          </div>
+
+          <div class="section panel">
+            <div class="section-title">Skills Summary</div>
+            <div class="detail-row">
+              <div>
+                <ul class="list">
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>JavaScript (ES6+)</li>
+                  <li>jQuery</li>
+                  <li>Responsive Web Design</li>
+                </ul>
+              </div>
+              <div>
+                <ul class="list">
+                  <li>Git</li>
+                  <li>GitHub</li>
+                  <li>Figma</li>
+                  <li>MS Word </li>
+                  <li>MS Excel </li>
+                  <li>MS PowerPoint </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="section panel">
+            <div class="section-title">Projects</div>
+            <div class="detail-row">
+              <div>
+                <p class="project-title">1. Personal Portfolio Website</p>
+                <p class="project-subtitle">Created a fully responsive personal portfolio using HTML, CSS, JavaScript and jQuery. Includes sections like Home, About, Skills, Projects and Contact.</p>
+              </div>
+              <div>
+                <p class="project-title">2. Responsive Landing Page</p>
+                <p class="project-subtitle">Designed a responsive landing page using HTML, CSS, JavaScript and jQuery. Optimized for all devices and modern browsers.</p>
+              </div>
+              <div>
+                <p class="project-title">3. Frontend Interface Projects</p>
+                <p class="project-subtitle">Delivered multiple web interfaces and landing pages focused on clean layouts, responsive behavior, and polished visual detail.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section panel">
+            <div class="section-title">Tools & Technologies</div>
+            <div class="tags">
+              <span class="tag">VS Code</span>
+              <span class="tag">Git</span>
+              <span class="tag">GitHub</span>
+              <span class="tag">Chrome DevTools</span>
+              <span class="tag">Figma</span>
+            </div>
+          </div>
+
+          <div class="section panel badge-grid">
+            <div class="badge">
+              <strong>FTEC</strong>
+              <small>Basic & Web Designing Certificate</small>
+            </div>
+            <div class="badge">
+              <strong>HackerRank</strong>
+              <small>Responsive Web Design</small>
+            </div>
+          </div>
+
+          <div class="section panel">
+            <div class="section-title">Declaration</div>
+            <p class="text-block">I hereby declare that the above information is true and correct to the best of my knowledge and belief.</p>
+            <div class="footer-note">
+              Date: 03 July 2026<br />Place: India
+            </div>
+            <div class="signature">Avnik Gupta</div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
