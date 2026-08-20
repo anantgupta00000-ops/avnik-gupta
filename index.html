@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Avnik Gupta is a frontend developer specializing in React, JavaScript, and Tailwind CSS. Creating premium, responsive web experiences with smooth animations and pixel-perfect UI implementation." />
-    <meta name="keywords" content="frontend developer, react, javascript, web design, tailwind css, responsive design, UI/UX" />
+    <meta name="description" content="Avnik Gupta is a frontend web developer who started learning web development in 2026, creating responsive websites using HTML, CSS and JavaScript." />
+    <meta name="keywords" content="frontend web developer, HTML, CSS, JavaScript, Bootstrap, jQuery, responsive design" />
     <meta name="theme-color" content="#FDF6ED" />
     <meta name="author" content="Avnik Gupta" />
-    <meta property="og:title" content="Avnik Gupta | Frontend Developer - Premium Web Experiences" />
-    <meta property="og:description" content="Specializing in modern frontend development with React, JavaScript, and Tailwind CSS" />
+    <meta property="og:title" content="Avnik Gupta | Frontend Web Developer" />
+    <meta property="og:description" content="Frontend web developer learning, building and improving with HTML, CSS and JavaScript." />
     <meta property="og:type" content="website" />
-    <title>Avnik Gupta | Frontend Developer - Premium Web Experiences</title>
+    <title>Avnik Gupta | Frontend Web Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
@@ -36,9 +36,9 @@
         <a href="#services">Services</a>
         <a href="#projects">Projects</a>
         <a href="#journey">Journey</a>
-        <a href="#reviews">Reviews</a>
+        <a href="#learning">Currently Learning</a>
         <a href="#contact">Contact</a>
-        <a href="resume.html">Resume</a>
+        <a class="resume-link" href="resume.html">Download Resume ↗</a>
       </nav>
     </header>
 
@@ -78,12 +78,12 @@
         <div class="section-heading">
           <p class="eyebrow">About</p>
           <h2 class="about-heading" aria-label="Learning web development and building responsive websites.">
-            <span>Learning</span> <span>web</span> <span>development</span> <br />
+              <h2>Let's Build Something</h2>
             <span>and</span> <span>building</span> <span>responsive</span> <span>websites.</span>
           </h2>
         </div>
-        <div class="about-grid">
-          <div class="glass-panel about-card about-copy">
+                <h3>Let's connect</h3>
+                  <p>Have an idea for a website or want to connect? I'd love to hear from you.</p>
             <div class="about-mask-block">I'm Avnik Gupta, a frontend web developer who started learning web development in 2026. I work with <span class="about-keyword">HTML, CSS and JavaScript</span> to create <span class="about-keyword">clean, responsive and visually appealing websites</span>. I'm currently focused on improving my frontend skills through real projects, practice websites and continuous learning.</div>
             <p class="about-mask-block about-secondary-copy">I believe in writing <span class="about-keyword">clean code</span>, creating <span class="about-keyword">responsive designs</span> that work across all devices, and building websites with a <span class="about-keyword">focus on user experience</span>. Every project is an opportunity to learn and improve my skills.</p>
           </div>
@@ -97,20 +97,30 @@
         <div class="focus-section">
           <div class="focus-heading"><p class="eyebrow">What I Focus On</p><h3>Details that make digital work feel considered.</h3></div>
           <div class="focus-grid">
-            <article class="glass-panel focus-card"><div class="focus-card-top"><span class="focus-icon">✦</span><strong>01</strong></div><h3>Clean &amp; Modern UI</h3><p>Visually polished interfaces with strong attention to layout, spacing, and consistency.</p></article>
-            <article class="glass-panel focus-card"><div class="focus-card-top"><span class="focus-icon">↔</span><strong>02</strong></div><h3>Responsive Web Design</h3><p>Seamless experiences that work smoothly across desktop, tablet, and mobile devices.</p></article>
-            <article class="glass-panel focus-card"><div class="focus-card-top"><span class="focus-icon">◌</span><strong>03</strong></div><h3>Smooth Interactions</h3><p>Purposeful animations and transitions that enhance the experience without distracting from it.</p></article>
-            <article class="glass-panel focus-card"><div class="focus-card-top"><span class="focus-icon">&lt;/&gt;</span><strong>04</strong></div><h3>Clean Frontend Development</h3><p>Organized, maintainable code using modern HTML, CSS, JavaScript, and frontend tools.</p></article>
+                <select name="project_type" aria-label="Project type" required>
+                  <option value="" disabled selected>Project Type</option>
+                  <option value="Website">Website</option>
+                  <option value="Landing Page">Landing Page</option>
+                  <option value="E-commerce">E-commerce</option>
+                  <option value="Portfolio">Portfolio</option>
+                  <option value="UI Design">UI Design</option>
+                  <option value="Other">Other</option>
+                </select>
+            <article class="glass-panel focus-card"><div class="focus-card-top"><span class="focus-icon">↔</span><strong>02</strong></div><h3>Responsive Design</h3><p>Building layouts that work across desktop, tablet and mobile.</p></article>
+                <button type="submit" class="btn btn-primary">Send Message →</button>
+            <article class="glass-panel focus-card"><div class="focus-card-top"><span class="focus-icon">&lt;/&gt;</span><strong>04</strong></div><h3>Continuous Learning</h3><p>Improving my skills by building projects and experimenting with new ideas.</p></article>
           </div>
         </div>
         <div class="approach-section" id="approach">
-          <div class="focus-heading"><p class="eyebrow">My Approach</p><h3>Plan → Build → Refine</h3></div>
+          <div class="focus-heading"><p class="eyebrow">My Approach</p><h3>Plan → Build → Test → Refine</h3></div>
           <div class="approach-flow">
-            <div class="approach-step"><span class="approach-dot"></span><strong>01&nbsp; PLAN</strong><small>Understand the design</small></div>
+            <div class="approach-step"><span class="approach-dot"></span><strong>01&nbsp; PLAN</strong><small>Understand the idea and structure</small></div>
             <span class="approach-line" aria-hidden="true"></span>
-            <div class="approach-step"><span class="approach-dot"></span><strong>02&nbsp; BUILD</strong><small>Create the responsive structure</small></div>
+            <div class="approach-step"><span class="approach-dot"></span><strong>02&nbsp; BUILD</strong><small>Create the layout with HTML, CSS and JavaScript</small></div>
             <span class="approach-line" aria-hidden="true"></span>
-            <div class="approach-step"><span class="approach-dot"></span><strong>03&nbsp; REFINE</strong><small>Polish every detail</small></div>
+            <div class="approach-step"><span class="approach-dot"></span><strong>03&nbsp; TEST</strong><small>Check responsiveness and interactions</small></div>
+                    <p>Frontend Web Developer · Learning &amp; Building with HTML, CSS &amp; JavaScript</p>
+            <div class="approach-step"><span class="approach-dot"></span><strong>04&nbsp; REFINE</strong><small>Improve spacing and appearance</small></div>
           </div>
         </div>
       </section>
@@ -121,14 +131,14 @@
           <h2>HTML, CSS, JavaScript and frontend fundamentals.</h2>
         </div>
         <div class="skills-grid">
-          <article class="glass-panel skill-card">
+                  <a href="#learning">Currently Learning</a>
             <div class="skill-header"><span>HTML5</span></div>
             <p class="skill-description">Semantic structure and clean webpage development</p>
           </article>
           <article class="glass-panel skill-card">
             <div class="skill-header"><span>CSS3</span></div>
             <p class="skill-description">Layouts, styling, animations and responsive design</p>
-          </article>
+              <p>© 2026 Avnik Gupta. All rights reserved.</p>
           <article class="glass-panel skill-card">
             <div class="skill-header"><span>JavaScript</span></div>
             <p class="skill-description">DOM, events and interactive website functionality</p>
@@ -303,46 +313,39 @@
 
       <section class="section" id="journey">
         <div class="section-heading">
-          <p class="eyebrow">My Frontend Journey</p>
-          <h2>Building modern web experiences with focus and dedication.</h2>
+          <p class="eyebrow">My Learning Journey</p>
+          <h2>Learning web development and building projects in 2026.</h2>
         </div>
         <div class="journey-timeline">
-          <div class="journey-item"><span class="journey-dot"></span><strong>2026 - Present</strong><p>Frontend Developer — Full-stack project development with React, Tailwind CSS, and modern JavaScript</p></div>
-          <div class="journey-item"><span class="journey-dot"></span><strong>2025</strong><p>Responsive Web Design — Mastering mobile-first approach and cross-browser compatibility</p></div>
-          <div class="journey-item"><span class="journey-dot"></span><strong>2025</strong><p>Advanced JavaScript — ES6+, DOM manipulation, async operations, and best practices</p></div>
-          <div class="journey-item"><span class="journey-dot"></span><strong>2025</strong><p>CSS Mastery — Flexbox, Grid, animations, and Tailwind CSS framework specialization</p></div>
-          <div class="journey-item"><span class="journey-dot"></span><strong>2025</strong><p>React & Modern Libraries — Component-based architecture, Framer Motion, state management</p></div>
-          <div class="journey-item"><span class="journey-dot"></span><strong>2024</strong><p>HTML5 & CSS3 Fundamentals — Semantic markup, responsive design foundations, accessibility</p></div>
-          <div class="journey-item"><span class="journey-dot"></span><strong>2024</strong><p>Portfolio Projects — Building real-world projects to demonstrate skills and growth</p></div>
-          <div class="journey-item"><span class="journey-dot"></span><strong>2024 Start</strong><p>Frontend Development Journey Begins — Passion for creating beautiful, functional web experiences</p></div>
+          <div class="journey-item"><span class="journey-dot"></span><strong>2026</strong><p>Started Web Development: Began learning HTML, CSS and JavaScript.</p></div>
+          <div class="journey-item"><span class="journey-dot"></span><strong>2026</strong><p>HTML &amp; CSS: Learned webpage structure, layouts, styling and responsive design.</p></div>
+          <div class="journey-item"><span class="journey-dot"></span><strong>2026</strong><p>JavaScript: Learning fundamentals, DOM manipulation, events and interactive functionality.</p></div>
+          <div class="journey-item"><span class="journey-dot"></span><strong>2026</strong><p>Responsive Design: Practicing websites that adapt across desktop, tablet and mobile screens.</p></div>
+          <div class="journey-item"><span class="journey-dot"></span><strong>2026</strong><p>Building Projects: Created real projects and practice websites while improving my frontend skills.</p></div>
         </div>
       </section>
 
-      <section class="section" id="reviews">
+      <section class="section" id="learning">
         <div class="section-heading">
-          <p class="eyebrow">Reviews</p>
-          <h2>What clients and collaborators say about working with me.</h2>
+          <p class="eyebrow">Currently Learning</p>
+          <h2>Building skills one project at a time.</h2>
         </div>
         <div class="reviews-grid">
           <article class="glass-panel review-card">
-            <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote>"Avnik delivered a responsive, modern website that exceeded our expectations. Excellent attention to detail and communication throughout."</blockquote>
-            <p class="review-author">E-commerce Client</p>
+            <h3>JavaScript</h3>
+            <p>Improving DOM manipulation, events and interactive functionality.</p>
           </article>
           <article class="glass-panel review-card">
-            <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote>"The Aryan Purse website is polished, professional, and perfectly represents our premium brand. Avnik truly understood our vision beautifully."</blockquote>
-            <p class="review-author">Rajkumar Gupta, Aryan Purse</p>
+            <h3>Responsive Design</h3>
+            <p>Practicing better layouts across different screen sizes.</p>
           </article>
           <article class="glass-panel review-card">
-            <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote>"Clear communication, clean code, and attention to performance. Working with Avnik felt like partnering with a true professional."</blockquote>
-            <p class="review-author">Brand Project Lead</p>
+            <h3>Frontend Development</h3>
+            <p>Learning how to create cleaner and more maintainable websites.</p>
           </article>
           <article class="glass-panel review-card">
-            <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote>"Every interaction was smooth and every component polished. Highly recommended for premium frontend work. Exceptional developer!"</blockquote>
-            <p class="review-author">Product Manager</p>
+            <h3>Python</h3>
+            <p>Learning programming fundamentals and problem-solving.</p>
           </article>
         </div>
       </section>
@@ -350,12 +353,12 @@
       <section class="section contact-section" id="contact">
         <div class="section-heading">
           <p class="eyebrow">Contact</p>
-          <h2>Let's Build Something Amazing</h2>
+          <h2>Let's Build Something</h2>
         </div>
         <div class="contact-grid">
           <div class="glass-panel contact-card">
-            <h3>Let’s talk</h3>
-              <p>Ready to create something amazing? Whether you have a specific project in mind or just want to explore possibilities, I'd love to hear about your vision. Let's connect and build something premium together.</p>
+            <h3>Let's connect</h3>
+              <p>Have an idea for a website or want to connect? I'd love to hear from you.</p>
             <ul class="contact-list">
               <li><a href="mailto:avnikgupta16@gmail.com">avnikgupta16@gmail.com</a></li>
               <li><a href="tel:+917042412263">+91 7042412263</a></li>
@@ -369,9 +372,17 @@
               <input type="text" name="name" placeholder="Your name" required />
               <input type="email" name="email" placeholder="Your email" required />
             </div>
-            <input type="text" name="subject" placeholder="Subject" required />
+            <select name="project_type" aria-label="Project type" required>
+              <option value="" disabled selected>Project Type</option>
+              <option value="Website">Website</option>
+              <option value="Landing Page">Landing Page</option>
+              <option value="E-commerce">E-commerce</option>
+              <option value="Portfolio">Portfolio</option>
+              <option value="UI Design">UI Design</option>
+              <option value="Other">Other</option>
+            </select>
             <textarea name="message" rows="6" placeholder="Tell me about your project" required></textarea>
-            <button type="submit" class="btn btn-primary">Send Message</button>
+            <button type="submit" class="btn btn-primary">Send Message →</button>
             <p class="form-status" id="formStatus" aria-live="polite"></p>
           </form>
         </div>
@@ -385,7 +396,7 @@
             <span>AG</span>
             <div>
               <h3>Avnik Gupta</h3>
-                <p>Frontend Web Developer</p>
+                <p>Frontend Web Developer · Learning &amp; Building with HTML, CSS &amp; JavaScript</p>
             </div>
           </div>
         </div>
@@ -397,7 +408,7 @@
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
-            <a href="#reviews">Reviews</a>
+            <a href="#learning">Currently Learning</a>
             <a href="#contact">Contact</a>
           </div>
         </div>
@@ -413,7 +424,7 @@
       </div>
 
       <div class="footer-bottom">
-          <p>Let's Create Something Amazing Together. © 2026 Avnik Gupta. Frontend Web Developer</p>
+          <p>© 2026 Avnik Gupta. All rights reserved.</p>
       </div>
     </footer>
 

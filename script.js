@@ -172,8 +172,8 @@ form?.addEventListener('submit', async (event) => {
       formStatus.textContent = 'EmailJS failed. Please try again later.';
     }
   } else {
-    const subject = encodeURIComponent(values.subject || 'Portfolio Contact');
-    const body = encodeURIComponent(`Name: ${values.name}\nEmail: ${values.email}\n\nMessage:\n${values.message}`);
+    const subject = encodeURIComponent(`${values.project_type || 'Portfolio'} enquiry`);
+    const body = encodeURIComponent(`Name: ${values.name}\nEmail: ${values.email}\nProject Type: ${values.project_type}\n\nMessage:\n${values.message}`);
     window.location.href = `mailto:avnikgupta16@gmail.com?subject=${subject}&body=${body}`;
     form.reset();
     formStatus.textContent = 'Your email app should open with the message ready to send.';
