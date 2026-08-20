@@ -49,7 +49,9 @@
       .list li::before { content: '•'; color: #778873; display: inline-block; margin-top: 0.1rem; }
       .skill-list, .tools-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; margin: 0; }
       .skill-pill { padding: 0.7rem 1rem; border-radius: 999px; background: var(--accent-soft); color: #4f4a42; font-size: 0.94rem; }
-      .detail-row { display: grid; gap: 0.75rem; margin-top: 0.75rem; }
+      .detail-row { display: grid; gap: 1.5rem; margin-top: 0.75rem; grid-template-columns: 1fr 1fr; align-items: start; }
+      .detail-row.single { grid-template-columns: 1fr; }
+      .detail-row.three { grid-template-columns: repeat(3, 1fr); }
       .detail-item { display: flex; gap: 0.75rem; align-items: center; }
       .detail-item svg { width: 1rem; height: 1rem; color: #dccfc0; flex-shrink: 0; }
       .contact-item a { color: inherit; text-decoration: none; }
@@ -68,6 +70,8 @@
       @media (max-width: 960px) {
         .resume { grid-template-columns: 1fr; }
         .container { padding: 1rem; }
+        .detail-row { grid-template-columns: 1fr; }
+        .detail-row.three { grid-template-columns: 1fr 1fr; }
       }
       @media (max-width: 760px) {
         .container { padding: 0.75rem; }
@@ -91,7 +95,7 @@
           </div>
           <div class="section">
             <h2>Contact</h2>
-            <div class="detail-row">
+            <div class="detail-row single">
               <div class="detail-item contact-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 8.5a9.9 9.9 0 0 0-4.47-5.9l-1 1A8 8 0 0 1 19 8.5c0 4.42-3.58 8-8 8a8 8 0 0 1-5.9-2.5l-1 1A9.9 9.9 0 0 0 8.5 21C14 21 19 16 19 10.5S14 0 8.5 0 0 5 0 10.5 5 21 10.5 21a9.9 9.9 0 0 0 5.9-2.5l1 1A11.9 11.9 0 0 1 8.5 24 13.5 13.5 0 0 1-5 10.5 13.5 13.5 0 0 1 8.5-3C14-3 19 2 19 7.5Z"/></svg><span>+91 7042412263</span></div>
               <div class="detail-item contact-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 13L2 6V4l10 5 10-5v2l-10 7z"/><path d="M2 8v12h20V8l-10 7L2 8z"/></svg><span><a href="mailto:avnikgupta16@gmail.com">avnikgupta16@gmail.com</a></span></div>
               <div class="detail-item contact-item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 4.41 2.87 8.16 6.84 9.49.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.78.61-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.9-.62.07-.61.07-.61 1 .07 1.53 1.02 1.53 1.02.89 1.52 2.33 1.08 2.9.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.7 1.02A9.4 9.4 0 0 1 12 7.12c.86.01 1.73.12 2.54.35 1.85-1.3 2.69-1.02 2.69-1.02.55 1.41.2 2.45.1 2.71.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.91.68 1.84 0 1.33-.01 2.4-.01 2.73 0 .26.18.58.69.48A9.96 9.96 0 0 0 22 12c0-5.5-4.46-9.96-9.96-9.96z"/></svg><span><a href="https://github.com/anantgupta00000-ops" target="_blank" rel="noreferrer">github.com/anantgupta00000-ops</a></span></div>
@@ -99,33 +103,32 @@
           </div>
           <div class="section">
             <h2>About Me</h2>
-            <p class="text-block">A motivated and detail-focused frontend developer with strong web development skills and practical experience creating responsive, user-centered interfaces. I enjoy solving real-world problems through elegant digital design.</p>
+            <p class="text-block">Passionate frontend developer specializing in modern web technologies. I combine technical expertise with design sensibility to create premium, responsive web experiences. Strong focus on clean code, performance, and user-centered design.</p>
           </div>
           <div class="section">
             <h2>Technical Skills</h2>
             <ul class="skill-list">
+              <li class="skill-pill">JavaScript (ES6+)</li>
               <li class="skill-pill">HTML5</li>
               <li class="skill-pill">CSS3</li>
-              <li class="skill-pill">JavaScript (ES6+)</li>
-              <li class="skill-pill">jQuery</li>
               <li class="skill-pill">Responsive Design</li>
-              <li class="skill-pill">Git</li>
-              <li class="skill-pill">GitHub</li>
+              <li class="skill-pill">Git & GitHub</li>
+              <li class="skill-pill">Web Design</li>
             </ul>
           </div>
           <div class="section">
-            <h2>Computer Skills</h2>
+            <h2>Professional Tools</h2>
             <ul class="list">
-              <li>MS Word </li>
-              <li>MS Excel </li>
-              <li>MS PowerPoint </li>
+              <li>VS Code &amp; Code Editors</li>
+              <li>Chrome DevTools &amp; Browser Debugging</li>
+              <li>Git Version Control &amp; GitHub</li>
             </ul>
           </div>
           <div class="section">
             <h2>Certifications</h2>
             <ul class="list">
-              <li>Basic & Web Designing (FTEC)</li>
-              <li>Responsive Web Design</li>
+              <li>Frontend Web Development (FTEC)</li>
+              <li>Responsive Web Design &amp; HTML5/CSS3</li>
             </ul>
           </div>
         </aside>
@@ -133,8 +136,8 @@
         <section class="main">
           <div class="section">
             <div class="section-title">AVNIK GUPTA</div>
-            <h1>Web Developer</h1>
-            <p class="text-block">I am a motivated and quick learner with hands-on knowledge of modern web development technologies. I enjoy creating responsive websites and solving real-world problems through polished digital design.</p>
+            <h1>Frontend Developer</h1>
+            <p class="text-block">Passionate frontend developer specializing in modern web technologies. I combine technical expertise with design sensibility to create premium, responsive web experiences. Strong focus on clean code, performance, and user-centered design.</p>
           </div>
 
           <div class="section panel">
@@ -142,20 +145,18 @@
             <div class="detail-row">
               <div>
                 <ul class="list">
-                  <li>HTML5</li>
-                  <li>CSS3</li>
-                  <li>JavaScript (ES6+)</li>
-                  <li>jQuery</li>
-                  <li>Responsive Web Design</li>
+                  <li>JavaScript (ES6+) & DOM Manipulation</li>
+                  <li>HTML5 & Semantic Markup</li>
+                  <li>CSS3 & Modern Layouts</li>
                 </ul>
               </div>
               <div>
                 <ul class="list">
-                  <li>Git</li>
-                  <li>GitHub</li>
-                  <li>MS Word </li>
-                  <li>MS Excel </li>
-                  <li>MS PowerPoint </li>
+                  <li>Responsive Web Design</li>
+                  <li>Git & GitHub Version Control</li>
+                  <li>VS Code & Chrome DevTools</li>
+                  <li>UI/UX Implementation</li>
+                  <li>Performance Optimization</li>
                 </ul>
               </div>
             </div>
@@ -163,18 +164,18 @@
 
           <div class="section panel">
             <div class="section-title">Projects</div>
-            <div class="detail-row">
+            <div class="detail-row three">
               <div>
-                <p class="project-title">1. Personal Portfolio Website</p>
-                <p class="project-subtitle">Created a fully responsive personal portfolio using HTML, CSS, JavaScript and jQuery. Includes sections like Home, About, Skills, Projects and Contact.</p>
+                <p class="project-title">Avnik Gupta Portfolio</p>
+                <p class="project-subtitle">Modern portfolio with responsive design, smooth interactions, and EmailJS contact integration. Demonstrates proficiency with frontend development, clean code practices, and polished user experience design.</p>
               </div>
               <div>
-                <p class="project-title">2. Responsive Landing Page</p>
-                <p class="project-subtitle">Designed a responsive landing page using HTML, CSS, JavaScript and jQuery. Optimized for all devices and modern browsers.</p>
+                <p class="project-title">Premium E-Commerce & Brand Sites</p>
+                <p class="project-subtitle">Developed multiple high-quality websites including The Legacy (book site), Studio K.S.H (fashion), and Aryan Purse. Each showcases responsive design, clean UI implementation, and polished user experiences.</p>
               </div>
               <div>
-                <p class="project-title">3. Frontend Interface Projects</p>
-                <p class="project-subtitle">Delivered multiple web interfaces and landing pages focused on clean layouts, responsive behavior, and polished visual detail.</p>
+                <p class="project-title">Interactive Web Experiences</p>
+                <p class="project-subtitle">Created responsive landing pages and portfolio websites using React, JavaScript, HTML5, and CSS3. All projects emphasize mobile-first design, accessibility, and smooth interactions.</p>
               </div>
             </div>
           </div>
@@ -182,9 +183,13 @@
           <div class="section panel">
             <div class="section-title">Tools & Technologies</div>
             <div class="tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">Framer Motion</span>
+              <span class="tag">Vite</span>
               <span class="tag">VS Code</span>
-              <span class="tag">Git</span>
-              <span class="tag">GitHub</span>
+              <span class="tag">Git & GitHub</span>
               <span class="tag">Chrome DevTools</span>
             </div>
           </div>
