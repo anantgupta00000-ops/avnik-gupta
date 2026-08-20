@@ -26,27 +26,6 @@ function animateTyping() {
 }
 setInterval(animateTyping, 3200);
 
-document.querySelectorAll('.skill-progress').forEach((skill) => {
-  const progress = Number(skill.dataset.progress);
-  skill.style.setProperty('--progress-value', `${progress}%`);
-  if (progress >= 80) skill.classList.add('liquid');
-});
-
-const skillsSection = document.getElementById('skills');
-const skillProgressObserver = new IntersectionObserver((entries, observer) => {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) return;
-
-    entry.target.querySelectorAll('.skill-progress').forEach((skill, index) => {
-      skill.style.setProperty('--progress', skill.style.getPropertyValue('--progress-value'));
-      setTimeout(() => skill.classList.add('is-loaded'), index * 100);
-    });
-    observer.unobserve(entry.target);
-  });
-}, { threshold: 0.2 });
-
-if (skillsSection) skillProgressObserver.observe(skillsSection);
-
 const cursor = document.getElementById('cursor');
 window.addEventListener('mousemove', (event) => {
   document.body.style.setProperty('--mouse-x', `${event.clientX}px`);

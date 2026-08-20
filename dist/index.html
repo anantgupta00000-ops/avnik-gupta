@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Avnik Gupta is a frontend web developer who started learning web development in 2026, creating responsive websites using HTML, CSS and JavaScript." />
     <meta name="keywords" content="frontend web developer, HTML, CSS, JavaScript, Bootstrap, jQuery, responsive design" />
-    <meta name="theme-color" content="#FDF6ED" />
+    <meta name="theme-color" content="#18181B" />
     <meta name="author" content="Avnik Gupta" />
     <meta property="og:title" content="Avnik Gupta | Frontend Web Developer" />
     <meta property="og:description" content="Frontend web developer learning, building and improving with HTML, CSS and JavaScript." />
     <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://anantgupta00000-ops.github.io/avnik-gupta/" />
     <title>Avnik Gupta | Frontend Web Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" crossorigin href="/assets/index-BsIfC5CD.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-Dw5mx2OS.css">
   </head>
   <body>
     <div class="loading-screen" id="loadingScreen">
@@ -68,10 +69,17 @@
           <div class="hero-highlights" aria-label="Technologies I am learning">
             <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Bootstrap</span><span>jQuery</span>
           </div>
+          <div class="hero-socials" aria-label="Profile links">
+            <a href="https://github.com/anantgupta00000-ops" target="_blank" rel="noreferrer">GitHub ↗</a>
+            <a href="https://www.linkedin.com/in/avnik-gupta-0b37a041b" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          </div>
           <p class="hero-scroll" aria-hidden="true">↓ <span>Scroll to Explore</span></p>
         </div>
 
         <div class="hero-visual">
+          <span class="hero-tech-badge hero-tech-html">HTML</span>
+          <span class="hero-tech-badge hero-tech-css">CSS</span>
+          <span class="hero-tech-badge hero-tech-js">JS</span>
           <div class="profile-image">
             <img src="/assets/avnik-profile-DkTXxHXi.png" alt="Avnik Gupta" />
           </div>
@@ -85,8 +93,8 @@
         </div>
         <div class="about-layout">
           <div class="about-copy glass-panel">
-            <p>I'm Avnik Gupta, a frontend web developer who started learning web development in 2026. I work with HTML, CSS and JavaScript to create clean, responsive and visually appealing websites.</p>
-            <p>I'm focused on improving my frontend skills through real projects, practice websites and continuous learning.</p>
+            <p class="about-primary-copy">I'm Avnik Gupta, a frontend web developer who started learning web development in 2026. I work with HTML, CSS and JavaScript to create clean, responsive and visually appealing websites.</p>
+            <p class="about-secondary-copy">I'm focused on improving my frontend skills through real projects, practice websites and continuous learning.</p>
             <div class="about-actions"><a class="btn btn-primary" href="#projects">View My Projects</a><a class="btn btn-secondary" href="resume.html">View Resume ↗</a></div>
           </div>
           <div class="about-visual">
@@ -140,6 +148,10 @@
           <article class="glass-panel skill-card">
             <div class="skill-header"><span>UI Implementation</span></div>
             <p class="skill-description">Turning designs and ideas into functional websites</p>
+          </article>
+          <article class="glass-panel skill-card">
+            <div class="skill-header"><span>Website Animations</span></div>
+            <p class="skill-description">CSS transitions and JavaScript interactions</p>
           </article>
           <article class="glass-panel skill-card">
             <div class="skill-header"><span>GitHub</span></div>
@@ -359,19 +371,23 @@
           </div>
           <form class="glass-panel form-card" id="contactForm">
             <div class="form-row">
-              <input type="text" name="name" placeholder="Your name" required />
-              <input type="email" name="email" placeholder="Your email" required />
+              <label class="sr-only" for="contactName">Your Name</label>
+              <input id="contactName" type="text" name="name" placeholder="Your Name *" autocomplete="name" required />
+              <label class="sr-only" for="contactEmail">Your Email</label>
+              <input id="contactEmail" type="email" name="email" placeholder="Your Email *" autocomplete="email" required />
             </div>
-            <select name="project_type" aria-label="Project type" required>
+            <label class="sr-only" for="projectType">Project Type</label>
+            <select id="projectType" name="project_type" required>
               <option value="" disabled selected>Project Type</option>
               <option value="Website">Website</option>
               <option value="Landing Page">Landing Page</option>
               <option value="E-commerce">E-commerce</option>
               <option value="Portfolio">Portfolio</option>
-              <option value="UI Design">UI Design</option>
+              <option value="UI Implementation">UI Implementation</option>
               <option value="Other">Other</option>
             </select>
-            <textarea name="message" rows="6" placeholder="Tell me about your project" required></textarea>
+            <label class="sr-only" for="contactMessage">Message</label>
+            <textarea id="contactMessage" name="message" rows="6" placeholder="Message *" required></textarea>
             <button type="submit" class="btn btn-primary">Send Message →</button>
             <p class="form-status" id="formStatus" aria-live="polite"></p>
           </form>
