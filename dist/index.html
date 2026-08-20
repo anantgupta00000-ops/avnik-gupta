@@ -8,11 +8,8 @@
     <title>Avnik Gupta | Premium Web Developer Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DMgdhoT9.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" crossorigin href="/assets/index-DrTsv8yp.css">
   </head>
   <body>
     <div class="loading-screen" id="loadingScreen">
@@ -33,31 +30,36 @@
         <a href="#skills">Skills</a>
         <a href="#services">Services</a>
         <a href="#projects">Projects</a>
+        <a href="#journey">Journey</a>
+        <a href="#reviews">Reviews</a>
         <a href="#contact">Contact</a>
+        <a href="resume.html">Resume</a>
       </nav>
     </header>
 
     <main id="home">
       <section class="hero section">
+        <div class="hero-effects" aria-hidden="true">
+          <span class="hero-orb hero-orb-purple"></span>
+          <span class="hero-orb hero-orb-pink"></span>
+          <span class="hero-particle particle-one"></span>
+          <span class="hero-particle particle-two"></span>
+          <span class="hero-particle particle-three"></span>
+          <span class="hero-particle particle-four"></span>
+        </div>
         <div class="hero-copy">
-          <p class="eyebrow">Frontend Web Developer</p>
-          <h1>Hi, I’m <span>Avnik Gupta</span></h1>
-          <div class="typing-line"><span id="typedText">Building modern interfaces</span></div>
+          <p class="availability-badge">AVAILABLE FOR FRONTEND PROJECTS</p>
+          <h1 class="hero-name">Hi, I'm <span>Avnik Gupta</span></h1>
+          <h2 class="hero-headline">I Build Modern <span>Frontend Experiences.</span></h2>
+          <div class="typing-line" aria-live="polite"><span id="typedText">Frontend Web Developer</span></div>
           <p class="hero-description">
-            I build modern, responsive, and high-performance websites with clean code, smooth animations, and exceptional user experiences. My goal is to create visually compelling digital products that feel premium on every screen.
+            I create clean, responsive and visually engaging websites with a focus on modern design, smooth interactions and great user experience.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#projects">View My Projects</a>
+            <a class="btn btn-primary" href="#projects">View My Work</a>
             <a class="btn btn-secondary" href="#contact">Contact Me</a>
-            <a class="btn btn-ghost" href="resume.html">Download Resume</a>
           </div>
-          <div class="hero-highlights">
-            <span>HTML5</span>
-            <span>CSS3</span>
-            <span>JavaScript</span>
-            <span>Bootstrap</span>
-            <span>WordPress</span>
-          </div>
+          <p class="hero-scroll" aria-hidden="true">↓ <span>Scroll to Explore</span></p>
         </div>
 
         <div class="hero-visual">
@@ -67,28 +69,43 @@
         </div>
       </section>
 
-      <section class="section" id="about">
+      <section class="section about-section" id="about">
         <div class="section-heading">
           <p class="eyebrow">About</p>
-          <h2>Crafting elegant experiences with clarity, motion, and intention.</h2>
+          <h2 class="about-heading" aria-label="Crafting refined digital experiences with clarity, precision, and purpose.">
+            <span>Crafting</span> <span>refined</span> <span>digital</span> <span>experiences</span><br />
+            <span>with</span> <span>clarity,</span> <span>precision,</span> <span>and</span> <span>purpose.</span>
+          </h2>
         </div>
         <div class="about-grid">
-          <div class="glass-panel about-card">
-            <p>
-              I’m Avnik Gupta, a frontend web developer passionate about transforming ideas into premium digital experiences. I blend modern design systems, thoughtful interaction, and clean code to build websites that feel refined and perform beautifully.
-            </p>
-            <p>
-              My expertise includes HTML5, CSS3, JavaScript, Bootstrap 5, jQuery, WordPress, responsive design, Git, and GitHub. I build responsive, accessible websites using modern web standards and polished frontend workflows.
-            </p>
+          <div class="glass-panel about-card about-copy">
+            <div class="about-mask-block">I'm Avnik Gupta, a frontend web developer focused on creating <span class="about-keyword">modern, responsive, and visually engaging</span> digital experiences. I combine <span class="about-keyword">clean code</span>, thoughtful design implementation, and <span class="about-keyword">smooth interactions</span> to build websites that are both polished and functional.</div>
+            <p class="about-mask-block about-secondary-copy">My core skills include <span class="about-keyword">HTML5, CSS3, JavaScript</span>, Bootstrap 5, jQuery, WordPress, responsive web design, Git, and GitHub. I focus on translating ideas and designs into <span class="about-keyword">well-structured, responsive websites</span> using modern frontend practices.</p>
           </div>
-          <div class="glass-panel about-card">
-            <h3>What I focus on</h3>
-            <ul class="check-list">
-              <li>Premium UI systems and motion</li>
-              <li>Responsive, accessible interfaces</li>
-              <li>SEO-friendly and performance-first builds</li>
-              <li>Clean, reusable frontend architecture</li>
-            </ul>
+        </div>
+        <div class="stats-strip" aria-label="Frontend strengths">
+          <div class="stat-item"><strong>01</strong><span>MODERN UI</span></div>
+          <div class="stat-item"><strong>02</strong><span>RESPONSIVE DESIGN</span></div>
+          <div class="stat-item"><strong>03</strong><span>SMOOTH INTERACTIONS</span></div>
+          <div class="stat-item"><strong>04</strong><span>CLEAN CODE</span></div>
+        </div>
+        <div class="focus-section">
+          <div class="focus-heading"><p class="eyebrow">What I Focus On</p><h3>Details that make digital work feel considered.</h3></div>
+          <div class="focus-grid">
+            <article class="glass-panel focus-card"><div class="focus-card-top"><span class="focus-icon">✦</span><strong>01</strong></div><h3>Clean &amp; Modern UI</h3><p>Visually polished interfaces with strong attention to layout, spacing, and consistency.</p></article>
+            <article class="glass-panel focus-card"><div class="focus-card-top"><span class="focus-icon">↔</span><strong>02</strong></div><h3>Responsive Web Design</h3><p>Seamless experiences that work smoothly across desktop, tablet, and mobile devices.</p></article>
+            <article class="glass-panel focus-card"><div class="focus-card-top"><span class="focus-icon">◌</span><strong>03</strong></div><h3>Smooth Interactions</h3><p>Purposeful animations and transitions that enhance the experience without distracting from it.</p></article>
+            <article class="glass-panel focus-card"><div class="focus-card-top"><span class="focus-icon">&lt;/&gt;</span><strong>04</strong></div><h3>Clean Frontend Development</h3><p>Organized, maintainable code using modern HTML, CSS, JavaScript, and frontend tools.</p></article>
+          </div>
+        </div>
+        <div class="approach-section" id="approach">
+          <div class="focus-heading"><p class="eyebrow">My Approach</p><h3>Plan → Build → Refine</h3></div>
+          <div class="approach-flow">
+            <div class="approach-step"><span class="approach-dot"></span><strong>01&nbsp; PLAN</strong><small>Understand the design</small></div>
+            <span class="approach-line" aria-hidden="true"></span>
+            <div class="approach-step"><span class="approach-dot"></span><strong>02&nbsp; BUILD</strong><small>Create the responsive structure</small></div>
+            <span class="approach-line" aria-hidden="true"></span>
+            <div class="approach-step"><span class="approach-dot"></span><strong>03&nbsp; REFINE</strong><small>Polish every detail</small></div>
           </div>
         </div>
       </section>
@@ -96,37 +113,32 @@
       <section class="section" id="skills">
         <div class="section-heading">
           <p class="eyebrow">Skills</p>
-          <h2>Core strengths across frontend, CMS, and product delivery.</h2>
+          <h2>Frontend craft, responsive thinking, and precise UI implementation.</h2>
         </div>
         <div class="skills-grid">
           <article class="glass-panel skill-card">
-            <div class="skill-icon">⚡</div>
-            <h3>Frontend</h3>
-            <div class="skill-tags">
-              <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Bootstrap</span><span>jQuery</span><span>Responsive Design</span>
-            </div>
-            <div class="progress-row"><span>UI precision</span><strong>95%</strong></div>
-            <div class="progress-bar"><span style="--value:95%"></span></div>
+            <div class="skill-header"><span>HTML</span><span class="percentage">95%</span></div>
+            <div class="skill-progress" data-progress="95" aria-label="HTML skill level 95 percent"></div>
           </article>
-
           <article class="glass-panel skill-card">
-            <div class="skill-icon">◧</div>
-            <h3>CMS</h3>
-            <div class="skill-tags">
-              <span>WordPress</span><span>Elementor</span><span>Theme Customization</span>
-            </div>
-            <div class="progress-row"><span>CMS implementation</span><strong>92%</strong></div>
-            <div class="progress-bar"><span style="--value:92%"></span></div>
+            <div class="skill-header"><span>CSS</span><span class="percentage">92%</span></div>
+            <div class="skill-progress" data-progress="92" aria-label="CSS skill level 92 percent"></div>
           </article>
-
           <article class="glass-panel skill-card">
-            <div class="skill-icon">⌘</div>
-            <h3>Tools</h3>
-            <div class="skill-tags">
-              <span>Git</span><span>GitHub</span><span>VS Code</span><span>Chrome DevTools</span><span>Figma</span>
-            </div>
-            <div class="progress-row"><span>Workflow quality</span><strong>90%</strong></div>
-            <div class="progress-bar"><span style="--value:90%"></span></div>
+            <div class="skill-header"><span>JavaScript</span><span class="percentage">85%</span></div>
+            <div class="skill-progress" data-progress="85" aria-label="JavaScript skill level 85 percent"></div>
+          </article>
+          <article class="glass-panel skill-card">
+            <div class="skill-header"><span>Responsive Web Design</span><span class="percentage">90%</span></div>
+            <div class="skill-progress" data-progress="90" aria-label="Responsive Web Design skill level 90 percent"></div>
+          </article>
+          <article class="glass-panel skill-card">
+            <div class="skill-header"><span>UI Precision</span><span class="percentage">95%</span></div>
+            <div class="skill-progress" data-progress="95" aria-label="UI Precision skill level 95 percent"></div>
+          </article>
+          <article class="glass-panel skill-card">
+            <div class="skill-header"><span>WordPress / CMS</span><span class="percentage">90%</span></div>
+            <div class="skill-progress" data-progress="90" aria-label="WordPress and CMS skill level 90 percent"></div>
           </article>
         </div>
       </section>
@@ -177,61 +189,55 @@
         </div>
         <div class="projects-grid">
           <article class="glass-panel project-card">
+            <div class="project-thumb"><img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=900&q=80" alt="Books on a reading table for The Legacy project" loading="lazy" /></div>
             <div class="project-top">
               <span class="project-badge">Live Demo</span>
               <span class="project-year">2026</span>
             </div>
             <h3>The Legacy</h3>
-            <p>A premium, responsive website featuring elegant layouts, refined motion, and a clean visual system.</p>
+            <p>A premium book website with refined layouts, thoughtful storytelling, and an elegant reading-focused experience.</p>
             <div class="skill-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Bootstrap</span><span>jQuery</span></div>
-            <a href="https://anantgupta00000-ops.github.io/the-legacy/" target="_blank" rel="noreferrer">View Demo</a>
+            <div class="project-actions"><a href="https://anantgupta00000-ops.github.io/the-legacy/" target="_blank" rel="noreferrer">Live Demo ↗</a><a href="https://github.com/anantgupta00000-ops/the-legacy" target="_blank" rel="noreferrer">GitHub ↗</a></div>
           </article>
 
           <article class="glass-panel project-card">
+            <div class="project-thumb"><img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=900&q=80" alt="Clothing collection for Studio K.S.H project" loading="lazy" /></div>
             <div class="project-top">
               <span class="project-badge">Live Demo</span>
               <span class="project-year">2026</span>
             </div>
             <h3>Studio K.S.H</h3>
-            <p>A creative business website built with a modern interface, strong editorial rhythm, and responsive sections.</p>
+            <p>A modern clothing website with stylish presentation, strong visual storytelling, and responsive collection sections.</p>
             <div class="skill-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Bootstrap</span></div>
-            <a href="https://anantgupta00000-ops.github.io/studio-K.s.H/" target="_blank" rel="noreferrer">View Demo</a>
+            <div class="project-actions"><a href="https://anantgupta00000-ops.github.io/studio-K.s.H/" target="_blank" rel="noreferrer">Live Demo ↗</a><a href="https://github.com/anantgupta00000-ops/studio-K.s.H" target="_blank" rel="noreferrer">GitHub ↗</a></div>
           </article>
 
           <article class="glass-panel project-card">
+            <div class="project-thumb"><img src="/assets/almond-Dq4GpIGu.png" alt="Almonds for Shop Nutri project" loading="lazy" /></div>
             <div class="project-top">
               <span class="project-badge">Live Demo</span>
               <span class="project-year">2026</span>
             </div>
             <h3>Shop Nutri</h3>
-            <p>A nutrition-focused experience for product storytelling, layout balance, and polished e-commerce presentation.</p>
+            <p>A dry fruit website with clear product presentation, nutrition-focused storytelling, and a polished shopping experience.</p>
             <div class="skill-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Bootstrap</span><span>jQuery</span></div>
-            <a href="https://anantgupta00000-ops.github.io/shop-Nutri/" target="_blank" rel="noreferrer">View Demo</a>
+            <div class="project-actions"><a href="https://anantgupta00000-ops.github.io/shop-Nutri/" target="_blank" rel="noreferrer">Live Demo ↗</a><a href="https://github.com/anantgupta00000-ops/shop-Nutri" target="_blank" rel="noreferrer">GitHub ↗</a></div>
           </article>
 
           <article class="glass-panel project-card">
-            <div class="project-top">
-              <span class="project-badge">Live Demo</span>
-              <span class="project-year">2026</span>
-            </div>
-            <h3>K.H</h3>
-            <p>A clean and professional business website with a refined interface and responsive design language.</p>
-            <div class="skill-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Bootstrap</span></div>
-            <a href="https://anantgupta00000-ops.github.io/k.h/" target="_blank" rel="noreferrer">View Demo</a>
-          </article>
-
-          <article class="glass-panel project-card">
+            <div class="project-thumb"><img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=900&q=80" alt="Fashion clothing rack for K.S.H project" loading="lazy" /></div>
             <div class="project-top">
               <span class="project-badge">Live Demo</span>
               <span class="project-year">2026</span>
             </div>
             <h3>K.S.H</h3>
-            <p>A polished brand experience built with a refined layout, premium visuals, and strong storytelling.</p>
+            <p>A stylish clothing website with a refined layout, premium visuals, and a modern fashion-focused experience.</p>
             <div class="skill-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Bootstrap</span></div>
-            <a href="https://anantgupta00000-ops.github.io/K.S.H/" target="_blank" rel="noreferrer">View Demo</a>
+            <div class="project-actions"><a href="https://anantgupta00000-ops.github.io/K.S.H/" target="_blank" rel="noreferrer">Live Demo ↗</a><a href="https://github.com/anantgupta00000-ops/K.S.H" target="_blank" rel="noreferrer">GitHub ↗</a></div>
           </article>
 
           <article class="glass-panel project-card">
+            <div class="project-thumb"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=80" alt="Elvora Cars project preview" loading="lazy" /></div>
             <div class="project-top">
               <span class="project-badge">Live Demo</span>
               <span class="project-year">2026</span>
@@ -239,10 +245,11 @@
             <h3>Elvora Cars</h3>
             <p>An elegant automotive website focused on luxury presentation, smooth navigation, and modern visual hierarchy.</p>
             <div class="skill-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Bootstrap</span></div>
-            <a href="https://anantgupta00000-ops.github.io/Elvora-Cars/" target="_blank" rel="noreferrer">View Demo</a>
+            <div class="project-actions"><a href="https://anantgupta00000-ops.github.io/Elvora-Cars/" target="_blank" rel="noreferrer">Live Demo ↗</a><a href="https://github.com/anantgupta00000-ops/Elvora-Cars" target="_blank" rel="noreferrer">GitHub ↗</a></div>
           </article>
 
           <article class="glass-panel project-card">
+            <div class="project-thumb"><img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=900&q=80" alt="Aromique project preview" loading="lazy" /></div>
             <div class="project-top">
               <span class="project-badge">Live Demo</span>
               <span class="project-year">2026</span>
@@ -250,10 +257,11 @@
             <h3>Aromique</h3>
             <p>A luxury-inspired brand website with clean sections, premium imagery, and a refined user experience.</p>
             <div class="skill-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Bootstrap</span></div>
-            <a href="https://anantgupta00000-ops.github.io/Aromique/" target="_blank" rel="noreferrer">View Demo</a>
+            <div class="project-actions"><a href="https://anantgupta00000-ops.github.io/Aromique/" target="_blank" rel="noreferrer">Live Demo ↗</a><a href="https://github.com/anantgupta00000-ops/Aromique" target="_blank" rel="noreferrer">GitHub ↗</a></div>
           </article>
 
           <article class="glass-panel project-card">
+            <div class="project-thumb"><img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=900&q=80" alt="School building for Harcourt project" loading="lazy" /></div>
             <div class="project-top">
               <span class="project-badge">Live Demo</span>
               <span class="project-year">2026</span>
@@ -261,7 +269,59 @@
             <h3>Harcourt</h3>
             <p>A refined showcase website with polished visuals, modern sections, and a strong premium brand feel.</p>
             <div class="skill-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Bootstrap</span></div>
-            <a href="https://anantgupta00000-ops.github.io/harcourt/" target="_blank" rel="noreferrer">View Demo</a>
+            <div class="project-actions"><a href="https://anantgupta00000-ops.github.io/harcourt/" target="_blank" rel="noreferrer">Live Demo ↗</a><a href="https://github.com/anantgupta00000-ops/harcourt" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+          </article>
+
+          <article class="glass-panel project-card">
+            <div class="project-thumb"><img src="https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=900&q=80" alt="Men's wallet for Aryan Purse project" loading="lazy" /></div>
+            <div class="project-top">
+              <span class="project-badge">Live Demo</span>
+              <span class="project-year">2026</span>
+            </div>
+            <h3>Aryan Purse</h3>
+            <p>A luxury handbag storefront with premium product presentation, clear pack pricing, and direct order support.</p>
+            <div class="skill-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+            <div class="project-actions"><a href="https://anantgupta00000-ops.github.io/Aryan-purse/" target="_blank" rel="noreferrer">Live Demo ↗</a><a href="https://github.com/anantgupta00000-ops/Aryan-purse" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="journey">
+        <div class="section-heading">
+          <p class="eyebrow">My Frontend Journey</p>
+          <h2>One focused year of building modern web experiences.</h2>
+        </div>
+        <div class="journey-timeline">
+          <div class="journey-item"><span class="journey-dot"></span><strong>2026</strong><p>Frontend Web Development</p></div>
+          <div class="journey-item"><span class="journey-dot"></span><strong>2026</strong><p>HTML &amp; CSS Development</p></div>
+          <div class="journey-item"><span class="journey-dot"></span><strong>2026</strong><p>JavaScript</p></div>
+          <div class="journey-item"><span class="journey-dot"></span><strong>2026</strong><p>Responsive Web Design</p></div>
+          <div class="journey-item"><span class="journey-dot"></span><strong>2026</strong><p>UI Precision &amp; Clean Layouts</p></div>
+          <div class="journey-item"><span class="journey-dot"></span><strong>2026</strong><p>WordPress / CMS Implementation</p></div>
+          <div class="journey-item"><span class="journey-dot"></span><strong>2026</strong><p>Building Modern Web Projects</p></div>
+        </div>
+      </section>
+
+      <section class="section" id="reviews">
+        <div class="section-heading">
+          <p class="eyebrow">Reviews</p>
+          <h2>Good work should feel good to work with.</h2>
+        </div>
+        <div class="reviews-grid">
+          <article class="glass-panel review-card">
+            <div class="review-stars" aria-label="4 out of 5 stars">★★★★</div>
+            <blockquote>“Avnik understood the visual direction quickly and turned it into a polished, responsive website.”</blockquote>
+            <p class="review-author">Project Collaboration</p>
+          </article>
+          <article class="glass-panel review-card">
+            <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>“The Aryan Purse website presents our men's wallet collection clearly and feels premium on every screen.”</blockquote>
+            <p class="review-author">Rajkumar Gupta</p>
+          </article>
+          <article class="glass-panel review-card">
+            <div class="review-stars" aria-label="4 out of 5 stars">★★★★</div>
+            <blockquote>“Clear communication, clean frontend work, and a final result that looks far beyond a template.”</blockquote>
+            <p class="review-author">Brand Project</p>
           </article>
         </div>
       </section>
@@ -269,17 +329,19 @@
       <section class="section contact-section" id="contact">
         <div class="section-heading">
           <p class="eyebrow">Contact</p>
-          <h2>Let’s create something memorable together.</h2>
+          <h2>Let's Build Something Amazing</h2>
         </div>
         <div class="contact-grid">
           <div class="glass-panel contact-card">
             <h3>Let’s talk</h3>
-            <p>For freelance projects, collaborations, or new opportunities, I’d love to hear from you.</p>
+              <p>Have a project in mind? Let's connect and create a modern, responsive and engaging web experience.</p>
             <ul class="contact-list">
               <li><a href="mailto:avnikgupta16@gmail.com">avnikgupta16@gmail.com</a></li>
               <li><a href="tel:+917042412263">+91 7042412263</a></li>
               <li><a href="https://www.linkedin.com/in/avnik-gupta-0b37a041b" target="_blank" rel="noreferrer">LinkedIn</a></li>
+                <li><a href="https://github.com/anantgupta00000-ops" target="_blank" rel="noreferrer">GitHub</a></li>
             </ul>
+              <div class="contact-actions"><a class="btn btn-primary" href="mailto:avnikgupta16@gmail.com">Email Me</a><a class="btn btn-secondary" href="https://www.linkedin.com/in/avnik-gupta-0b37a041b" target="_blank" rel="noreferrer">LinkedIn</a><a class="btn btn-secondary" href="https://github.com/anantgupta00000-ops" target="_blank" rel="noreferrer">GitHub</a></div>
           </div>
           <form class="glass-panel form-card" id="contactForm">
             <div class="form-row">
@@ -302,7 +364,7 @@
             <span>AG</span>
             <div>
               <h3>Avnik Gupta</h3>
-              <p>Frontend developer crafting premium, responsive websites.</p>
+                <p>Frontend Web Developer</p>
             </div>
           </div>
         </div>
@@ -314,6 +376,7 @@
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
+            <a href="#reviews">Reviews</a>
             <a href="#contact">Contact</a>
           </div>
         </div>
@@ -329,11 +392,12 @@
       </div>
 
       <div class="footer-bottom">
-        <p>© 2026 Avnik Gupta. Built with care for elegant digital experiences.</p>
+          <p>Let's Create Something Amazing Together. © 2026 Avnik Gupta. Frontend Web Developer</p>
       </div>
     </footer>
 
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+      <div class="cursor" id="cursor" aria-hidden="true"></div>
+      <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
     <script src="script.js"></script>
   </body>
 </html>

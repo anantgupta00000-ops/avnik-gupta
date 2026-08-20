@@ -27,27 +27,27 @@ const services = [
 const projects = [
   {
     title: 'The Legacy',
-    desc: 'A premium, responsive website featuring elegant layouts, refined motion, and a clean visual system.',
+    desc: 'A premium book website with refined layouts, thoughtful storytelling, and an elegant reading-focused experience.',
     link: 'https://anantgupta00000-ops.github.io/the-legacy/',
     stack: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap', 'jQuery'],
   },
   {
     title: 'Studio K.S.H',
-    desc: 'A creative business website built with a modern interface, strong editorial rhythm, and responsive sections.',
+    desc: 'A modern clothing website with stylish presentation, strong visual storytelling, and responsive collection sections.',
     link: 'https://anantgupta00000-ops.github.io/studio-K.s.H/',
     stack: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap'],
   },
   {
     title: 'Shop Nutri',
-    desc: 'A nutrition-focused experience for product storytelling, layout balance, and polished e-commerce presentation.',
+    desc: 'A dry fruit website with clear product presentation, nutrition-focused storytelling, and a polished shopping experience.',
     link: 'https://anantgupta00000-ops.github.io/shop-Nutri/',
     stack: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap', 'jQuery'],
   },
   {
-    title: 'K.H',
-    desc: 'A clean and professional business website with a refined interface and responsive design language.',
-    link: 'https://anantgupta00000-ops.github.io/k.h/',
-    stack: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap'],
+    title: 'Aryan Purse',
+    desc: 'A luxury handbag storefront with premium product presentation, clear pack pricing, and direct order support.',
+    link: 'https://anantgupta00000-ops.github.io/Aryan-purse/',
+    stack: ['HTML5', 'CSS3', 'JavaScript'],
   },
 ];
 
@@ -190,6 +190,7 @@ function App() {
                 {['home', 'about', 'skills', 'services', 'projects', 'contact'].map((item) => (
                   <a key={item} href={`#${item}`} className="text-sm text-[#6D655C]" onClick={() => setIsMenuOpen(false)}>{item.charAt(0).toUpperCase() + item.slice(1)}</a>
                 ))}
+                <a href="resume.html" className="text-sm text-[#6D655C]" onClick={() => setIsMenuOpen(false)}>Resume</a>
               </div>
             </motion.div>
           )}
@@ -205,7 +206,6 @@ function App() {
               <div className="mt-8 flex flex-wrap justify-center gap-4 lg:justify-start">
                 <a href="#projects" className="rounded-full bg-gradient-to-r from-[#778873] to-[#A88A72] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-[#778873]/20">View My Projects</a>
                 <a href="#contact" className="rounded-full border border-[#DCCFC0] bg-white px-5 py-3 text-sm font-semibold text-[#5F5F5F]">Contact Me</a>
-                <a href="resume.html" className="rounded-full border border-[#DCCFC0] bg-white px-5 py-3 text-sm font-semibold text-[#5F5F5F]">Download Resume</a>
               </div>
               <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
                 {['HTML5', 'CSS3', 'JavaScript', 'Bootstrap', 'WordPress'].map((item) => <span key={item} className="rounded-full border border-[#DCCFC0] bg-[#FFF9F2] px-3 py-1 text-sm text-[#6D655C]">{item}</span>)}

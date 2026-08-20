@@ -8,7 +8,7 @@ const backToTop = document.getElementById('backToTop');
 const siteHeader = document.getElementById('siteHeader');
 const typedText = document.getElementById('typedText');
 
-const texts = ['Creating premium web experiences', 'Designing elegant digital products', 'Crafting polished responsive interfaces'];
+const texts = ['Frontend Web Developer', 'HTML • CSS • JavaScript', 'Responsive Web Designer', 'Creative UI Developer'];
 let index = 0;
 
 window.addEventListener('load', () => {
@@ -16,31 +16,56 @@ window.addEventListener('load', () => {
 });
 
 function animateTyping() {
-  typedText.textContent = texts[index % texts.length];
+  if (!typedText) return;
+  typedText.classList.add('is-changing');
+  setTimeout(() => {
+    typedText.textContent = texts[index % texts.length];
+    typedText.classList.remove('is-changing');
+  }, 180);
   index += 1;
 }
-setInterval(animateTyping, 2200);
+setInterval(animateTyping, 3200);
+
+document.querySelectorAll('.skill-progress').forEach((skill) => {
+  const progress = Number(skill.dataset.progress);
+  skill.style.setProperty('--progress-value', `${progress}%`);
+  if (progress >= 80) skill.classList.add('liquid');
+});
+
+const skillsSection = document.getElementById('skills');
+const skillProgressObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+
+    entry.target.querySelectorAll('.skill-progress').forEach((skill, index) => {
+      skill.style.setProperty('--progress', skill.style.getPropertyValue('--progress-value'));
+      setTimeout(() => skill.classList.add('is-loaded'), index * 100);
+    });
+    observer.unobserve(entry.target);
+  });
+}, { threshold: 0.2 });
+
+if (skillsSection) skillProgressObserver.observe(skillsSection);
+
+const cursor = document.getElementById('cursor');
+window.addEventListener('mousemove', (event) => {
+  document.body.style.setProperty('--mouse-x', `${event.clientX}px`);
+  document.body.style.setProperty('--mouse-y', `${event.clientY}px`);
+  if (cursor) {
+    cursor.style.left = `${event.clientX}px`;
+    cursor.style.top = `${event.clientY}px`;
+  }
+});
+
+document.querySelectorAll('a, button, input, textarea').forEach((element) => {
+  element.addEventListener('mouseenter', () => cursor?.classList.add('is-active'));
+  element.addEventListener('mouseleave', () => cursor?.classList.remove('is-active'));
+});
 
 menuToggle?.addEventListener('click', () => navLinks.classList.toggle('open'));
 document.querySelectorAll('.nav-links a').forEach((link) => {
   link.addEventListener('click', () => navLinks.classList.remove('open'));
 });
-
-if (window.gsap) {
-  gsap.registerPlugin(ScrollTrigger);
-  const heroTimeline = gsap.timeline({ defaults: { ease: 'power3.out' } });
-  heroTimeline.from('.hero-copy > *', { y: 24, opacity: 0, stagger: 0.12, duration: 0.8 })
-    .from('.hero-visual', { y: 20, opacity: 0, duration: 0.8 }, '-=0.5');
-
-  gsap.utils.toArray('.glass-panel, .section-heading').forEach((el) => {
-    gsap.from(el, {
-      scrollTrigger: { trigger: el, start: 'top 90%' },
-      y: 24,
-      opacity: 0,
-      duration: 0.7
-    });
-  });
-}
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -54,6 +79,52 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.6 });
 
 document.querySelectorAll('section[id]').forEach((section) => observer.observe(section));
+
+const revealObserver = new IntersectionObserver((entries, revealObserverInstance) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+      revealObserverInstance.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.section-heading, .about-card, .skill-card, .service-card, .project-card, .focus-card, .review-card, .contact-card, .form-card, #journey').forEach((element) => {
+  element.classList.add('reveal');
+  revealObserver.observe(element);
+});
+
+const statsStrip = document.querySelector('.stats-strip');
+const statsObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('is-visible');
+    observer.unobserve(entry.target);
+  });
+}, { threshold: 0.35 });
+
+if (statsStrip) statsObserver.observe(statsStrip);
+
+document.querySelectorAll('.focus-card').forEach((card) => {
+  card.addEventListener('pointermove', (event) => {
+    const bounds = card.getBoundingClientRect();
+    card.style.setProperty('--spotlight-x', `${event.clientX - bounds.left}px`);
+    card.style.setProperty('--spotlight-y', `${event.clientY - bounds.top}px`);
+  });
+});
+
+const approachSection = document.getElementById('approach');
+const approachObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    entry.target.querySelectorAll('.approach-step, .approach-line').forEach((element, index) => {
+      setTimeout(() => element.classList.add('active'), index * 300);
+    });
+    observer.unobserve(entry.target);
+  });
+}, { threshold: 0.35 });
+
+if (approachSection) approachObserver.observe(approachSection);
 
 window.addEventListener('scroll', () => {
   const scrollTop = window.scrollY;
