@@ -41,9 +41,17 @@ document.querySelectorAll('a, button, input, textarea, select').forEach((element
   element.addEventListener('mouseleave', () => cursor?.classList.remove('is-active'));
 });
 
-menuToggle?.addEventListener('click', () => navLinks.classList.toggle('open'));
+menuToggle?.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('open');
+  menuToggle.classList.toggle('open', isOpen);
+  menuToggle.setAttribute('aria-expanded', String(isOpen));
+});
 document.querySelectorAll('.nav-links a').forEach((link) => {
-  link.addEventListener('click', () => navLinks.classList.remove('open'));
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    menuToggle?.classList.remove('open');
+    menuToggle?.setAttribute('aria-expanded', 'false');
+  });
 });
 
 const observer = new IntersectionObserver((entries) => {
