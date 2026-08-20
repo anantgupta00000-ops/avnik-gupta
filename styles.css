@@ -750,14 +750,40 @@ input, textarea { background: rgba(24, 24, 27, 0.7); border-color: var(--border-
 .about-layout { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 2rem; align-items: stretch; }
 .about-copy { display: flex; flex-direction: column; justify-content: center; min-height: 360px; }
 .about-copy p { color: var(--text-muted); line-height: 1.8; font-size: 1.05rem; }
+.about-copy .about-primary-copy { color: #e9d5ff; }
+.about-copy .about-secondary-copy { color: #c4b5fd; }
 .about-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; }
 .about-visual { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; min-height: 360px; }
 .about-profile-card { grid-row: span 2; display: flex; flex-direction: column; justify-content: end; overflow: hidden; padding: 0; }
 .about-profile-card img { width: 100%; height: 100%; min-height: 300px; object-fit: cover; object-position: center top; opacity: 0.82; }
 .about-profile-card span { margin: -3rem 1rem 1rem; position: relative; color: var(--text-main); font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; }
 .about-stat-card, .about-tech-card { display: flex; flex-direction: column; justify-content: center; min-height: 112px; }
+.about-stat-card { min-width: 0; overflow-wrap: anywhere; }
 .about-stat-card strong, .about-tech-card strong { color: var(--accent); font-size: 1.6rem; }
-.about-stat-card span, .about-tech-card span { color: var(--text-muted); font-size: 0.8rem; margin-top: 0.35rem; }
+.about-stat-card span, .about-tech-card span { display: block; max-width: 100%; color: var(--text-muted); font-size: 0.8rem; line-height: 1.35; margin-top: 0.35rem; overflow-wrap: anywhere; }
+.reveal.active:not(.project-card):not(.about-profile-card) { text-align: center; }
+.reveal.active:not(.project-card):not(.about-profile-card) h2,
+.reveal.active:not(.project-card):not(.about-profile-card) h3,
+.reveal.active:not(.project-card):not(.about-profile-card) .skill-header span,
+.reveal.active:not(.project-card):not(.about-profile-card) .about-stat-card strong,
+.reveal.active:not(.project-card):not(.about-profile-card) .about-tech-card strong {
+  background: linear-gradient(120deg, #f0abfc, #c084fc 45%, #67e8f9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.reveal.active:not(.project-card):not(.about-profile-card) p,
+.reveal.active:not(.project-card):not(.about-profile-card) small,
+.reveal.active:not(.project-card):not(.about-profile-card) span {
+  color: #c4b5fd;
+}
+.reveal.active:not(.project-card):not(.about-profile-card) .btn,
+.reveal.active:not(.project-card):not(.about-profile-card) .contact-list,
+.reveal.active:not(.project-card):not(.about-profile-card) .form-row,
+.reveal.active:not(.project-card):not(.about-profile-card) input,
+.reveal.active:not(.project-card):not(.about-profile-card) textarea,
+.reveal.active:not(.project-card):not(.about-profile-card) select { text-align: center; }
 .skills-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .skill-card { min-height: 150px; display: flex; flex-direction: column; justify-content: space-between; }
 .skill-description { margin: 0; color: var(--text-muted); line-height: 1.55; }
@@ -774,6 +800,51 @@ input, textarea { background: rgba(24, 24, 27, 0.7); border-color: var(--border-
 .journey-item:hover .journey-dot { transform: scale(1.2); }
 select { width: 100%; appearance: none; background: rgba(24, 24, 27, 0.7); border: 1px solid var(--border-purple); border-radius: 12px; color: var(--text-main); padding: 0.85rem 1rem; font: inherit; }
 .resume-link { border: 1px solid var(--border-purple); border-radius: 999px; padding: 0.55rem 0.8rem !important; background: linear-gradient(135deg, rgba(168,85,247,0.2), rgba(236,72,153,0.14)); }
+.resume-link:hover { box-shadow: 0 0 22px rgba(168,85,247,0.22); }
+.contact-card { transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease; }
+.contact-card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 16px 34px rgba(168,85,247,0.14); }
+input:focus, textarea:focus, select:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(168,85,247,0.14), 0 0 22px rgba(168,85,247,0.12); }
+.hero-highlights span { animation: badgeFloat 5s ease-in-out infinite; }
+.hero-highlights span:nth-child(2) { animation-delay: -1s; }
+.hero-highlights span:nth-child(3) { animation-delay: -2s; }
+.hero-highlights span:nth-child(4) { animation-delay: -3s; }
+.hero-highlights span:nth-child(5) { animation-delay: -4s; }
+.glass-panel { position: relative; overflow: hidden; }
+.skill-card, .service-card, .project-card, .focus-card, .review-card, .about-stat-card, .about-tech-card { isolation: isolate; }
+.skill-card::before, .service-card::before, .project-card::before, .focus-card::before, .review-card::before, .about-stat-card::before, .about-tech-card::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; border-radius: inherit; background: linear-gradient(110deg, transparent 20%, rgba(192,132,252,0.48) 48%, transparent 72%); background-size: 240% 100%; opacity: 0; transition: opacity 0.35s ease; }
+.skill-card:hover::before, .service-card:hover::before, .project-card:hover::before, .focus-card:hover::before, .review-card:hover::before, .about-stat-card:hover::before, .about-tech-card:hover::before { opacity: 1; animation: borderSweep 2.8s ease-in-out infinite; }
+.skill-card::after, .service-card::after, .project-card::after, .review-card::after, .about-stat-card::after, .about-tech-card::after { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: 0; background: radial-gradient(circle at var(--spotlight-x, 50%) var(--spotlight-y, 50%), rgba(168,85,247,0.18), transparent 46%); transition: opacity 0.35s ease; }
+.skill-card:hover::after, .service-card:hover::after, .project-card:hover::after, .review-card:hover::after, .about-stat-card:hover::after, .about-tech-card:hover::after { opacity: 1; }
+.skill-card:hover, .service-card:hover, .project-card:hover, .focus-card:hover, .review-card:hover, .about-stat-card:hover, .about-tech-card:hover { transform: translateY(-8px) scale(1.01); border-color: var(--primary); box-shadow: 0 18px 38px rgba(168,85,247,0.18), 0 0 0 1px rgba(192,132,252,0.08); }
+.service-icon, .focus-icon { transition: transform 0.35s ease; }
+.service-card:hover .service-icon, .focus-card:hover .focus-icon { animation: iconFloat 1.8s ease-in-out infinite; }
+.btn { position: relative; overflow: hidden; }
+.btn::after { content: ''; position: absolute; inset: 0; transform: translateX(-110%); background: linear-gradient(100deg, transparent, rgba(255,255,255,0.28), transparent); transition: transform 0.6s ease; }
+.btn:hover::after { transform: translateX(110%); }
+.reveal { transition-delay: var(--reveal-delay, 0ms); }
+.reveal.active { animation: revealIn 0.75s var(--reveal-delay, 0ms) cubic-bezier(0.22, 1, 0.36, 1) both; }
+.project-card .project-actions { opacity: 0.72; transform: translateY(5px); transition: opacity 0.35s ease, transform 0.35s ease; }
+.project-card:hover .project-actions { opacity: 1; transform: translateY(0); }
+.project-thumb img { transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1); }
+.project-card:hover .project-thumb img { transform: scale(1.03); }
+.project-filters { display: flex; flex-wrap: wrap; gap: 0.55rem; margin: -0.4rem 0 1.4rem; }
+.filter-button { border: 1px solid var(--border-purple); border-radius: 999px; padding: 0.55rem 0.8rem; background: rgba(45,45,49,0.72); color: var(--text-muted); cursor: pointer; transition: color 0.25s ease, background 0.25s ease, border-color 0.25s ease, transform 0.25s ease; }
+.filter-button:hover, .filter-button.is-active { color: var(--text-main); border-color: var(--primary); background: rgba(168,85,247,0.16); transform: translateY(-2px); }
+#practice .project-card.is-filtered { display: none; }
+#practice .project-card.filter-in { animation: filterIn 0.45s var(--filter-delay, 0ms) both; }
+.journey-item.reveal.active { animation-name: journeyReveal; }
+@keyframes revealIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes journeyReveal { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes filterIn { from { opacity: 0; transform: translateY(12px) scale(0.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes borderSweep { 0%, 100% { background-position: 160% 0; } 50% { background-position: -60% 0; } }
+@keyframes iconFloat { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-4px) rotate(4deg); } }
+@keyframes badgeFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-highlights span, .skill-card:hover .service-icon, .focus-card:hover .focus-icon { animation: none; }
+  .reveal.active, .journey-item.reveal.active, #practice .project-card.filter-in { animation: none; opacity: 1; transform: none; }
+  .btn::after, .skill-card::before, .service-card::before, .project-card::before, .focus-card::before, .review-card::before, .about-stat-card::before, .about-tech-card::before { display: none; }
+}
 
 @media (max-width: 980px) {
   .about-layout { grid-template-columns: 1fr; }

@@ -57,7 +57,7 @@ window.addEventListener('mousemove', (event) => {
   }
 });
 
-document.querySelectorAll('a, button, input, textarea').forEach((element) => {
+document.querySelectorAll('a, button, input, textarea, select').forEach((element) => {
   element.addEventListener('mouseenter', () => cursor?.classList.add('is-active'));
   element.addEventListener('mouseleave', () => cursor?.classList.remove('is-active'));
 });
@@ -89,8 +89,9 @@ const revealObserver = new IntersectionObserver((entries, revealObserverInstance
   });
 }, { threshold: 0.12 });
 
-document.querySelectorAll('.section-heading, .about-card, .skill-card, .service-card, .project-card, .focus-card, .review-card, .contact-card, .form-card, #journey').forEach((element) => {
+document.querySelectorAll('.section-heading, .about-card, .about-stat-card, .about-tech-card, .about-profile-card, .skill-card, .service-card, .project-card, .focus-card, .review-card, .contact-card, .form-card, .journey-item, #journey').forEach((element, elementIndex) => {
   element.classList.add('reveal');
+  element.style.setProperty('--reveal-delay', `${Math.min(elementIndex * 60, 420)}ms`);
   revealObserver.observe(element);
 });
 
@@ -110,6 +111,32 @@ document.querySelectorAll('.focus-card').forEach((card) => {
     const bounds = card.getBoundingClientRect();
     card.style.setProperty('--spotlight-x', `${event.clientX - bounds.left}px`);
     card.style.setProperty('--spotlight-y', `${event.clientY - bounds.top}px`);
+  });
+});
+
+document.querySelectorAll('.skill-card, .service-card, .project-card, .about-stat-card, .about-tech-card, .review-card').forEach((card) => {
+  card.addEventListener('pointermove', (event) => {
+    const bounds = card.getBoundingClientRect();
+    card.style.setProperty('--spotlight-x', `${event.clientX - bounds.left}px`);
+    card.style.setProperty('--spotlight-y', `${event.clientY - bounds.top}px`);
+  });
+});
+
+const filterButtons = document.querySelectorAll('.filter-button');
+const practiceCards = document.querySelectorAll('#practice .project-card');
+filterButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const filter = button.dataset.filter;
+    filterButtons.forEach((item) => item.classList.toggle('is-active', item === button));
+    practiceCards.forEach((card, cardIndex) => {
+      const matches = filter === 'all' || card.dataset.category === filter;
+      card.classList.toggle('is-filtered', !matches);
+      if (matches) {
+        card.style.setProperty('--filter-delay', `${cardIndex * 55}ms`);
+        card.classList.remove('filter-in');
+        requestAnimationFrame(() => card.classList.add('filter-in'));
+      }
+    });
   });
 });
 
