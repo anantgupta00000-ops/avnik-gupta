@@ -203,3 +203,242 @@
 		animation: none;
 	}
 }
+
+/* Premium motion and approved-palette text hierarchy. */
+.hero-name,
+.hero-headline,
+.hero-highlight,
+.hero-description,
+.hero-actions,
+.hero-highlights,
+.hero-socials {
+	opacity: 0;
+	transform: translateY(18px);
+	animation: premiumFadeUp .7s cubic-bezier(.22, 1, .36, 1) forwards;
+}
+
+.hero-name { animation-delay: .08s; }
+.hero-headline { animation-delay: .16s; }
+.hero-highlight { animation-delay: .24s; }
+.hero-description { animation-delay: .32s; }
+.hero-actions { animation-delay: .4s; }
+.hero-highlights { animation-delay: .48s; }
+.hero-socials { animation-delay: .56s; }
+
+.hero-name span,
+.hero-headline span,
+.hero-headline strong {
+	background: linear-gradient(120deg, var(--purple), var(--pink), var(--lavender));
+	background-size: 180% 180%;
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	-webkit-text-fill-color: transparent;
+	animation: approvedTextShift 6s ease-in-out infinite;
+}
+
+.hero-visual {
+	opacity: 0;
+	transform: translateY(14px) scale(.98);
+	animation: premiumFadeUp .85s .24s cubic-bezier(.22, 1, .36, 1) forwards;
+}
+
+.profile-image {
+	transition: transform .55s cubic-bezier(.22, 1, .36, 1), border-color .35s ease, box-shadow .35s ease;
+}
+
+.profile-image:hover {
+	transform: translateY(-6px) scale(1.015);
+	border-color: var(--pink);
+	box-shadow: 0 18px 36px var(--background);
+}
+
+.section-heading {
+	opacity: 0;
+	transform: translateY(16px);
+	transition: opacity .7s ease, transform .7s cubic-bezier(.22, 1, .36, 1);
+}
+
+.section-heading.reveal,
+.section-heading.reveal.active,
+.section-heading.reveal.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.section-heading h2,
+.section-heading h3 {
+	color: var(--lavender);
+}
+
+.eyebrow,
+.journey-date,
+.project-year,
+.stat-item strong,
+.about-stat-card strong,
+.about-tech-card strong {
+	color: var(--pink);
+}
+
+.skill-header,
+.service-card h3,
+.project-card h3,
+.journey-card h3,
+.focus-card h3,
+.learning-card h3,
+.contact-card h3,
+.footer-block h4 {
+	color: var(--lavender);
+}
+
+.skill-description,
+.service-card p,
+.project-card p,
+.journey-card p,
+.focus-card p,
+.learning-card p,
+.contact-card p,
+.footer-brand p,
+.footer-bottom {
+	color: var(--text-muted);
+}
+
+.skill-header span,
+.service-icon,
+.focus-icon {
+	color: var(--pink);
+}
+
+.skill-card,
+.service-card,
+.project-card,
+.focus-card,
+.learning-card,
+.contact-card,
+.form-card,
+.journey-item {
+	animation: cardFloatIn .7s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+.skill-card:nth-child(2),
+.service-card:nth-child(2),
+.project-card:nth-child(2),
+.focus-card:nth-child(2),
+.learning-card:nth-child(2) { animation-delay: .08s; }
+
+.skill-card:nth-child(3),
+.service-card:nth-child(3),
+.project-card:nth-child(3),
+.focus-card:nth-child(3),
+.learning-card:nth-child(3) { animation-delay: .16s; }
+
+.skill-card:nth-child(4),
+.service-card:nth-child(4),
+.project-card:nth-child(4),
+.focus-card:nth-child(4),
+.learning-card:nth-child(4) { animation-delay: .24s; }
+
+.skill-card:hover .skill-header,
+.service-card:hover .service-icon,
+.focus-card:hover .focus-icon {
+	transform: translateY(-3px) rotate(3deg);
+	transition: transform .35s ease;
+}
+
+.project-card .skill-tags span,
+.project-card .project-badge,
+.hero-highlights span {
+	transition: transform .25s ease, border-color .25s ease, color .25s ease;
+}
+
+.project-card .skill-tags span:hover,
+.project-card .project-badge:hover,
+.hero-highlights span:hover {
+	transform: translateY(-2px);
+	border-color: var(--pink);
+	color: var(--lavender);
+}
+
+.journey-item {
+	opacity: 0;
+	transform: translateY(20px);
+}
+
+.journey-item.active,
+.journey-item.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.journey-item:nth-child(2) { animation-delay: .1s; }
+.journey-item:nth-child(3) { animation-delay: .2s; }
+.journey-item:nth-child(4) { animation-delay: .3s; }
+.journey-item:nth-child(5) { animation-delay: .4s; }
+
+.journey-timeline::before {
+	transform-origin: top;
+	animation: timelineReveal 1.2s ease both;
+}
+
+.journey-dot {
+	transition: transform .3s ease, background .3s ease;
+}
+
+.journey-item:hover .journey-dot {
+	transform: scale(1.25);
+	background: var(--pink);
+}
+
+.site-footer > *,
+.contact-grid > * {
+	animation: premiumFadeUp .7s .15s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+@keyframes premiumFadeUp {
+	to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes cardFloatIn {
+	from { opacity: 0; transform: translateY(18px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes timelineReveal {
+	from { transform: scaleY(0); }
+	to { transform: scaleY(1); }
+}
+
+@keyframes approvedTextShift {
+	0%, 100% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.hero-name,
+	.hero-headline,
+	.hero-highlight,
+	.hero-description,
+	.hero-actions,
+	.hero-highlights,
+	.hero-socials,
+	.hero-visual,
+	.section-heading,
+	.skill-card,
+	.service-card,
+	.project-card,
+	.focus-card,
+	.learning-card,
+	.contact-card,
+	.form-card,
+	.journey-item,
+	.site-footer > *,
+	.contact-grid > * {
+		animation: none;
+		opacity: 1;
+		transform: none;
+	}
+
+	.journey-timeline::before {
+		animation: none;
+	}
+}
