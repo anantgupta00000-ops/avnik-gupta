@@ -26,27 +26,38 @@ const services = [
 
 const projects = [
   {
+    title: 'AVIX',
+    desc: 'A premium audio products storefront with a polished catalog, product-focused sections, and a clean conversion-driven layout.',
+    link: 'https://anantgupta00000-ops.github.io/AVIX/',
+    image: '/avix-preview.png',
+    stack: ['HTML5', 'CSS3', 'JavaScript', 'Responsive UI', 'E-commerce Layout'],
+  },
+  {
     title: 'The Legacy',
     desc: 'A premium book website with refined layouts, thoughtful storytelling, and an elegant reading-focused experience.',
     link: 'https://anantgupta00000-ops.github.io/the-legacy/',
+    image: null,
     stack: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap', 'jQuery'],
   },
   {
     title: 'Studio K.S.H',
     desc: 'A modern clothing website with stylish presentation, strong visual storytelling, and responsive collection sections.',
     link: 'https://anantgupta00000-ops.github.io/studio-K.s.H/',
+    image: null,
     stack: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap'],
   },
   {
     title: 'Shop Nutri',
     desc: 'A dry fruit website with clear product presentation, nutrition-focused storytelling, and a polished shopping experience.',
     link: 'https://anantgupta00000-ops.github.io/shop-Nutri/',
+    image: null,
     stack: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap', 'jQuery'],
   },
   {
     title: 'Aryan Purse',
     desc: 'A luxury handbag storefront with premium product presentation, clear pack pricing, and direct order support.',
     link: 'https://anantgupta00000-ops.github.io/Aryan-purse/',
+    image: null,
     stack: ['HTML5', 'CSS3', 'JavaScript'],
   },
 ];
@@ -304,6 +315,11 @@ function App() {
             <div className="mt-8 grid gap-6 md:grid-cols-2">
               {projects.map((project) => (
                 <div key={project.title} className="card rounded-[1.5rem] border border-[#DCCFC0] bg-[#FFF9F2] p-8 backdrop-blur-xl">
+                  {project.image && (
+                    <div className="mb-5 overflow-hidden rounded-2xl border border-[#DCCFC0] bg-[#FDF6ED]">
+                      <img src={project.image} alt={`${project.title} preview`} className="h-52 w-full object-cover transition duration-300 hover:scale-105" />
+                    </div>
+                  )}
                   <div className="flex items-center justify-between">
                     <a href={project.link} target="_blank" rel="noreferrer" className="rounded-full border border-[#DCCFC0] bg-[#FDF6ED] px-3 py-1 text-sm font-medium text-[#778873] transition hover:bg-[#F7E7DC]">Live Demo</a>
                     <span className="text-sm text-[#8a7f70]">2026</span>
